@@ -27,12 +27,33 @@
 #             break
 #     print(c)
 #type2
-for _ in range(int(input())):
-    n,k=map(int,input().split())
-    s=input()
-    c='NO'
-    cons='*'*k
-    if cons in s:
-        c='YES'
-    print(c)
+# for _ in range(int(input())):
+#     n,k=map(int,input().split())
+#     s=input()
+#     c='NO'
+#     cons='*'*k
+#     if cons in s:
+#         c='YES'
+#     print(c)
+# type 3
 
+for _ in range(int(input())):
+    n, k = map(int, input().split())
+    s= input()
+    flag=0
+    count = 0
+    for i in range(n):
+        if s[i] == '*':
+            count+=1
+        else:
+            if count>=k:
+                flag=1
+                break
+            else:
+                count=0
+    if count>=k:
+        flag=1
+    if flag==1:
+        print("YES")
+    else:
+        print("NO")
