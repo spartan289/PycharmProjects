@@ -53,20 +53,14 @@
 # else:
 #     print("Draw")
 # q6
-import math
-def fascinating(n):
-    ar = [0]*10
-    while n>0:
-        digit=math.floor(n%10)
-        if ar[digit]:
-            return False
-        ar[digit] = 1
-        n=n/10
-    return True
-for _ in range(int(input())):
-    n=int(input())
-    while fascinating(n) is True:
-        n+=1
-    n+=1
-    print(n)
-
+# n=int(input())
+# while 1:
+#     n+=1
+#     a=n//1000
+#     b=n//100%10
+#     c=n//10%10
+#     d=n%10
+#     if a!=b and a!=c and a!=d and b!=c and b!=d and c!=d:
+#         break
+# print(n)
+# berth
