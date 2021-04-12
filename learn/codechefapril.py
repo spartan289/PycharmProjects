@@ -36,24 +36,47 @@
 #         c='YES'
 #     print(c)
 # type 3
+#
+# for _ in range(int(input())):
+#     n, k = map(int, input().split())
+#     s= input()
+#     flag=0
+#     count = 0
+#     for i in range(n):
+#         if s[i] == '*':
+#             count+=1
+#         else:
+#             if count>=k:
+#                 flag=1
+#                 break
+#             else:
+#                 count=0
+#     if count>=k:
+#         flag=1
+#     if flag==1:
+#         print("YES")
+#     else:
+#         print("NO")
 
-for _ in range(int(input())):
-    n, k = map(int, input().split())
-    s= input()
-    flag=0
-    count = 0
-    for i in range(n):
-        if s[i] == '*':
-            count+=1
-        else:
-            if count>=k:
-                flag=1
-                break
-            else:
-                count=0
-    if count>=k:
-        flag=1
-    if flag==1:
-        print("YES")
+# dice and problem
+def dice(n):
+    if n==1:
+        return 20
+    elif n==2:
+        return 36
+    elif n==3:
+        return 51
+    elif n==4:
+        return 60
     else:
-        print("NO")
+        r=n%4
+        s=60*(n//4)-4*(n-4)
+        if r==1:
+            s=s+dice(1)
+        elif r==2:
+            s=s+dice(2)
+        elif  r==3:
+            s=s+dice(3)
+        return s
+for _ in range(int(input())):
+    print(dice(int(input())))
