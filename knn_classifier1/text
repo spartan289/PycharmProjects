@@ -1,0 +1,432 @@
+(?i)(?<=customer\s?=\s?)[0-9a-zA-Z-+./:\s]*(?=\s{2})
+(?i)(?<=customer\s?=\s?)[0-9a-zA-Z-+./:\s]*(?=\s{2})
+(?<=and customer\s|customer:\s|Customer\sName\s:\s|-> customer: | from customer )[^\s=].*
+(?<=customer=).*(?=&)
+(?<=customer name  not correct \(|access type  not correct \().*(?=\),  no data are shown)
+(?<=customer ).*(?= not modified| not removed| not created)
+(?<=for customer\s?|fail to retrieve customer: |&customer=).*
+(?<=unable to get customer |unable to get customer profile).*(?= for webuser )
+(?<=displaying customer |remove customer ).*
+(?<=List to be processed:).*
+(?<=Customer Name).*
+(?<=listCustomer: query=).*(?=, limit=)
+(?<=creating reseller: |displaying reseller |modifying reseller: |for reseller ).*
+(?<=unable to get reseller ).*(?= for customer | for webuser )
+(?<=display customer information for ).*
+(?<=reseller ).*(?= not modified| not removed)
+(?<=filtering\sby\sreseller\s).*
+(?<=referer\s).*(?=\))
+(?i)(?<=url\s=\s|url:\s).*
+(?<=download:\s|download\sof:\s).*
+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d*)?)|(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)::((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)
+(?<=UDDI\s:\s|adding\sHost\s\(name\s=\s|\sat\s:\s|location\s=\s|WebAddress\s=\s|applicationURL:\s).*
+(?i)(?<=port:?\s)\d{1,5}
+(?i)(?<=username:\s|username\s:\s|usernamemrfserver:\s).*
+(?i)(?<=password(accounting|scheduler|mrfserver|stat|frc|generation|alarm)?:\s).*
+(?<=password\s:\s).*
+(?i)(?<=Web user suspended:|at 2nd try for ).*
+(?<=webuser ).*(?= language code| logged in)
+(?<=UserBean\s?\().*?(?=\)  (webProfile)?)
+(?<=web user: |wrong passwords for |web user : ).*?(?=(\slast)|\s)
+(?<=web user ).*(?= not created| not modified| notifi| not removed| not resumed)
+(?<=web user ).*(?= suspended| suspension failed| failed to enter )
+(?<= for webuser:?\s|tree already |Locked by ).*
+(?<=for webuser:).*(?= returned error)
+(?<=web session).*(?= removed)
+(?<=,MESSAGE= ).*(?=;)
+(?<=display web user information for |(PM|AM)\sby\s).*
+(?<=smtplogin:\s|loginAlarm:\s|SRPLogin:|loginStat:\s|loginAccounting:\s|loginScheduler:\s|MRPLogin:\s|loginFRC:\s|pinNumb:).*
+(?<=filtering\sby\slogin\s).*(?=and customer )
+(?<=tree\sentry\sin\ssingleton:\s).*(?=tree)
+(?<=displayForTruncateCheck).*(?=_tree)
+(?i)(?<=(savetree method for|saveTree for tree: |Tree restored is success for: |tree entry from singleton: )).*(?=_|_subtree|_tree)
+(?<=the routing tree ).*(?= is locked, can't be removed)
+(?<=pb with the sub tree ).*
+(?<=locking subtree: ).*
+(?<=loading sub tree: ).*
+(?<=error in removing sub tree ).*
+(?<=slee config |sleelist: |sleeName: ).*?(?=\s)
+(?<=SLEE ).*(?=\swhile\s)
+(?<=removing OSP websession object for ).*
+(?<=creating new session object for ).*(?=: jessionid)
+(?<=jessionid=|jsessionid=).*(?=, remoteip|added to active| removed from active)
+([a-zA-Z0-9]){32}(?=\s)
+(?<=serviceProviderName: ).*
+(?<=web800URL:\s|domain:\s|web800\surl\s|web800\scontent\s|response\sfrom\sweb800:\s).*
+(?<=' from |mailfrom: |sent to: |mailto: ).*
+(?<=<matclogin xsi:type=").*(?=<\/matclogin\>)
+(?<=<matcpwd xsi:type=").*(?=<\/matcpwd\>)
+(?<=<webuser xsi:type=").*(?=<\/webuser\>)
+(?<=at\s:\s).*(?=\son\s:\s)
+(?<=<\/returnComment\>).*(?=\<z_sec_qn1 xsi:type="xsd:string"\>)
+(?<=<extraSql xsi:type="xsd:string"\>).*(?=<\/extraSql\>)
+(?<=<sqlAddCrit xsi:type="xsd:string"\>).*(?=<\/sqlAddCrit\>)
+(?<=Host:\s).*
+(?<=display scheduledReport information for ).*(?=\))
+(?<=smtp\shost:\s|domain:\s|\sINFO\s\sSmtpHostSingleton\s-\s).*
+(?<=location\s=\s|WebAddress\s=\s).*
+(?i)(?<=(\b(xmlns:xsi|SOAP-ENV:encodingStyle|xmlns:xsd|xmlns:ns1|xmlns:soapenv|xmlns:soapenc|xmlns:ns2|xmlns:ns1|xmlns:SOAP-ENV|xmlns:SOAP-ENC|env:encodingStyle|soapenv:encodingStyle))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?<=<cdrsepgrp xsi:type=").*(?=</cdrsepgrp>)
+(?<=<frcsepgroup xsi:type=").*(?=</frcsepgroup>)
+(?<=<sdpsepgr xsi:type=").*(?=</sdpsepgr>)
+(?<=<w800sepg xsi:type=").*(?=</w800sepg>)
+(?<=w800sepg=).*?(?=\s)
+(?<=<web_ref xsi:type=").*(?=</web_ref>)
+(?<=<mail xsi:type=").*(?=</mail>)
+(?<=Duplicate Login from IP:| on MRF server :?\s?).*
+(?<=,ALARM= WEB_PAGE_ERROR_ALRM,MESSAGE=\s).*(?=;\s)
+(?i)(?<=(<(dest_rf|org_rf|dialledNumber|CLI|URI|domain|lstport|prxyaddr|prxyport|companymn|mn40|z_src_addr|subject|text_email|name_cc|name_to|from_email|cellid|lac_tac|mcc)\s(xsi:type="xsd:string">)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\+#\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(mnc|ba_ref|destination|hostname|own_gt1|greyn|pin|frc_num|cld|code|wiscode|country|gt|opc|serv_key|clg_nbr|p_code|z_toll_no|psi_imsu|mn20|dst_dg|adnr_nbr|adob_nbr)\s(xsi:type="xsd:string">)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\+#\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(adoc_nbr|adol_nbr|qdest_no|opc1|scf_id|srpnbr|srpnbr1|loc_tacacode|mrf_loc|z_hlr_ssn|mccode|mncode|url|own_rf|san_rf|blw_nbr|own_ri|camsuser|ms_pref)\s(xsi:type="xsd:string">)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\+\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(msconfhost|msconfuser|msvidhost|msviduser|camshost|camsport|mstype|msuser|mshost|dstpin|dsttno|fChargedPartyId|predest|servnumb|pref_cli_intl|pref_cli_nat)\s(xsi:type="xsd:string">)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\+\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(nbrdgt|webpin|upin|pin_nb|sms|vlr|slee_mn|acs_code|mn|frc_numb|z_cli|gmn15|smsnumb|fcharged_party_identity|sep_ref|custo|email1|email|add_street|add_strno)\s(xsi:type="xsd:string">)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\+\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(add_pobox|add_zipcode|add_city|jsessionid|remoteip|cwi_link|psi_imsd|stndby_host|z_ann_path|z_crecd_path|z_nfs_path|add_fax|add_tel1|add_tel2|cont_mobno)\s(xsi:type="xsd:string">)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\+\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(cont_telno|ccode|z_voicemail_email|z_vmail_path|z_mob_no|password|pwd1|pwd2|pwd3|pwd4|pwd5|pwd6|pwd7|pwd8|mbr1_rf|mbr10_rf|mbr11_rf|mbr12_rf|mbr13_rf|mbr14_rf|mbr15_rf|mbr16_rf|mbr17_rf|mbr18_rf)\s(xsi:type="xsd:string">)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\+\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(mbr19_rf|mbr2_rf|mbr20_rf|mbr3_rf|mbr4_rf|mbr5_rf|mbr6_rf|mbr7_rf|mbr8_rf|mbr9_rf|ipaddr|dest_por|owner|pass|sys_id|sys_ty)\s(xsi:type="xsd:string">)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(ospsess\_id|sip\_stack\_add\_port|cld|sipuriuser\_cld|sipuriuser\_gen1|gen1|gen2|gen3|gen4|gen5|gen6|domain\_ocld|ocld|clg)>))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\+:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(unused|generic\_name|sipuriuser\_clg|domain\_red\_nbr|domain\_cld|domain\_clg|call\_id|cc\_for\_sip\_uri|icid|CorrID)>))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\+:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<submit next="))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\?\.\/\[\]',$%;\- =]+)
+(?i)(?<=(<pinNumb xsi:type="xsd:int">))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(z_sec_ans1|mn10|tc_code|c_code|areadg|z_sec_ans2|bunit|z_sec_qn1|custnumb|z_sec_qn2|lastname|cwi_rout|custo|email|locked_by|firstlogin|firstname|mn|mn2)\s(xsi:type="xsd:string">)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\+\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=(<(dest_rf|org_rf|dialledNumber|CLI|URI|domain|lstport|prxyaddr|prxyport|companymn|mn40|z_src_addr|subject|text_email|name_cc|name_to|from_email|cellid|lac_tac|mcc)\s(xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string\[[0-9]{1,100}\]">))).*?(?=\<\/(dest_rf|org_rf|dialledNumber|CLI|URI|domain|lstport|prxyaddr|prxyport|companymn|mn40|z_src_addr|subject|text_email|name_cc|name_to|from_email|cellid|lac_tac|mcc))
+(?i)(?<=(<(mnc|ba_ref|destination|hostname|own_gt1|greyn|pin|frc_num|cld|code|wiscode|country|gt|opc|serv_key|clg_nbr|p_code|z_toll_no|psi_imsu|mn20|dst_dg|adnr_nbr|adob_nbr)\s(xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string\[[0-9]{1,100}\]">))).*?(?=\<\/(mnc|ba_ref|destination|hostname|own_gt1|greyn|pin|frc_num|cld|code|wiscode|country|gt|opc|serv_key|clg_nbr|p_code|z_toll_no|psi_imsu|mn20|dst_dg|adnr_nbr|adob_nbr))
+(?i)(?<=(<(adoc_nbr|adol_nbr|qdest_no|opc1|scf_id|srpnbr|srpnbr1|loc_tacacode|mrf_loc|z_hlr_ssn|mccode|mncode|url|own_rf|san_rf|blw_nbr|own_ri|camsuser|ms_pref)\s(xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string\[[0-9]{1,100}\]">))).*?(?=\<\/(adoc_nbr|adol_nbr|qdest_no|opc1|scf_id|srpnbr|srpnbr1|loc_tacacode|mrf_loc|z_hlr_ssn|mccode|mncode|url|own_rf|san_rf|blw_nbr|own_ri|camsuser|ms_pref))
+(?i)(?<=(<(msconfhost|msconfuser|msvidhost|msviduser|camshost|camsport|mstype|msuser|mshost|dstpin|dsttno|fChargedPartyId|predest|servnumb|pref_cli_intl|pref_cli_nat)\s(xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string\[[0-9]{1,100}\]">))).*?(?=\<\/(msconfhost|msconfuser|msvidhost|msviduser|camshost|camsport|mstype|msuser|mshost|dstpin|dsttno|fChargedPartyId|predest|servnumb|pref_cli_intl|pref_cli_nat))
+(?i)(?<=(<(nbrdgt|webpin|upin|pin_nb|sms|vlr|slee_mn|acs_code|mn|frc_numb|z_cli|gmn15|smsnumb|fcharged_party_identity|sep_ref|custo|email1|email|add_street|add_strno)\s(xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string\[[0-9]{1,100}\]">))).*?(?=\<\/(nbrdgt|webpin|upin|pin_nb|sms|vlr|slee_mn|acs_code|mn|frc_numb|z_cli|gmn15|smsnumb|fcharged_party_identity|sep_ref|custo|email1|email|add_street|add_strno))
+(?i)(?<=(<(add_pobox|add_zipcode|add_city|jsessionid|remoteip|cwi_link|psi_imsd|stndby_host|z_ann_path|z_crecd_path|z_nfs_path|add_fax|add_tel1|add_tel2|cont_mobno)\s(xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string\[[0-9]{1,100}\]">))).*?(?=\<\/(add_pobox|add_zipcode|add_city|jsessionid|remoteip|cwi_link|psi_imsd|stndby_host|z_ann_path|z_crecd_path|z_nfs_path|add_fax|add_tel1|add_tel2|cont_mobno))
+(?i)(?<=(<(cont_telno|ccode|z_voicemail_email|z_vmail_path|z_mob_no|password|pwd1|pwd2|pwd3|pwd4|pwd5|pwd6|pwd7|pwd8|mbr1_rf|mbr10_rf|mbr11_rf|mbr12_rf|mbr13_rf|mbr14_rf|mbr15_rf|mbr16_rf|mbr17_rf|mbr18_rf)\s(xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string\[[0-9]{1,100}\]">))).*?(?=\<\/(cont_telno|ccode|z_voicemail_email|z_vmail_path|z_mob_no|password|pwd1|pwd2|pwd3|pwd4|pwd5|pwd6|pwd7|pwd8|mbr1_rf|mbr10_rf|mbr11_rf|mbr12_rf|mbr13_rf|mbr14_rf|mbr15_rf|mbr16_rf|mbr17_rf|mbr18_rf))
+(?i)(?<=(<(mbr19_rf|mbr2_rf|mbr20_rf|mbr3_rf|mbr4_rf|mbr5_rf|mbr6_rf|mbr7_rf|mbr8_rf|mbr9_rf|ipaddr|dest_por|owner|pass|sys_id|sys_ty)\s(xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string\[[0-9]{1,100}\]">))).*?(?=\<\/(mbr19_rf|mbr2_rf|mbr20_rf|mbr3_rf|mbr4_rf|mbr5_rf|mbr6_rf|mbr7_rf|mbr8_rf|mbr9_rf|ipaddr|dest_por|owner|pass|sys_id|sys_ty))
+(?i)(?<=(<(z_sec_ans1|mn10|tc_code|c_code|areadg|z_sec_ans2|bunit|z_sec_qn1|custnumb|z_sec_qn2|lastname|cwi_rout|custo|email|locked_by|firstlogin|firstname|mn|mn2)\s(xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string\[[0-9]{1,100}\]">))).*?(?=\<\/(z_sec_ans1|mn10|tc_code|c_code|areadg|z_sec_ans2|bunit|z_sec_qn1|custnumb|z_sec_qn2|lastname|cwi_rout|custo|email|locked_by|firstlogin|firstname|mn|mn2))
+(?i)(?<=(uname|user|node)\s{0,3}(id)?(:|=| |\()\s{0,3})([A-Za-z0-9(_)(\.)(@)(#)(\&)(\.)($)(%)]){1,100}
+(?i)(?<=(calledpartynumber|callingpartynumber)\s{1,2})(\+{0,1})([0-9A-Za-z]){1,100}
+(?i)(?<=((redirecting|originalCalled|additionalcalled)(PartyID))\s{1,2}(\"?)(\'?)(=?))(\+{0,1})([0-9A-Za-z]){1,100}
+(?i)(?<=(sip:))([A-Z(\d)(\.)(:)(+)-]){1,100}
+(?i)(?<=(user-agent|UA_invite)\s?(:|=))(\s?([A-Z0-9a-z(\d)(\.)(\/)(+)-]){1,100}){1,100}
+(?i)(?<=((branch|tag)=)\s?)([A-Z(\d)(\.)(:)(*)(+)(@)-]){1,100}
+(?i)(?<=(HOSTNAME\$?|nodename|((\[)(\")(\")hostname(\$)(\")(\")(\]).GetString(\()(\))))\s{0,1}(={1,2})\s{0,1}("){0,2})([A-Za-z0-9(_)(\.)(@)(#)(\&)(:)(\.)($)(%)]){1,100}
+(?i)(?<=(host(\)?[^name])\s{0,1}(:?)(=){0,2})\s{0,1}("){0,2})([A-Za-z0-9(_)(\=)(\")(\[)(\])(\$)(\-)(\.)(@)(#)(\&)(:)(\.)($)(%)]){1,100}
+(?i)(?<=(\bexename=))([A-Z(\d)(\.)(\s)(:)(@)(_)(/)]){1,100}
+(?i)(?<=(\bsrv_name|serv_ref)=)([A-Z(\d)(\.)(:)(@)(_)(/)]){1,100}
+(?i)(?<=(\b,name=))([A-Z(\d)(\.)(:)(@)(_)(/)-]){1,100}
+(?i)(?<=((prt|(\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\:\b))\s{0,10}[=:)(]{0,4}\s?))(\d){1,5}
+(?i)(?<=(port)\s{0,1}(=)?\s{0,1}("){0,2})([0-9)]){1,5}
+(?i)(\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b)
+(?i)(?<=(conn:|tab_connection_rec|tab_connection_old)\s?)((\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,8}))
+(?i)(?<=(CV_([A-Za-z-_]{1,100})\s?=))\s?([A-Z0-9a-z(\d)(<)(>)(\s)(@)(\=)(\")(;)(\,)(\/)(\.)(:)(+)-][^\n]){1,100}
+(?i)(?<=((from|to|contact):)\s?(\"{0,2}))([A-Z0-9a-z(+)]){1,100}\s?([A-Z0-9a-z(+)]){1,100}
+(?i)(?<=(@))[A-Z0-9.-:]*
+(?i)(?<=(P-([A-Za-z-0-9]{1,100})(:|=|\s))).*(\S)
+(?i)(?<=(Referred-By|History-Info|Diversion|Alert-Info|PANI\s|accessnetinfo|psu|bufReqURIrn)(:|=)).*
+(?i)(?<=((call-id|call id):?)\s?)([A-Z0-9a-z-\s=]){1,100}
+(->\s\s)([A-Za-z0-9_\.@#\&:\.\/$%^!>?<\(\){}"\',\-\+;\[\]|\*\`\@!|\=\~\\ ]*)
+(?<=(\bGroup|OBJ:|OBJECT|SepName=?:?)\s?(=|:)?\s?)([A-Za-z(\d)(\.)(#)(@)(')(_)(/)-]){1,100}
+(?<=(\bDUMP:)\s?)([A-Za-z(\d)(\.)(#)(\s)(@)(')(_)(/)-]){1,100}
+(?i)(?<=(c=IN)\s).*
+(?i)(?<=(domain|user|user\s?type)(r|d|o|g|_stl|from)?\s?(=|:)\s?[^:])([A-Za-z0-9(_)(\.)(@)(#)(\&)(\.)($)(%)]){1,100}
+(?i)(?<=(portRetrieved)).*
+(?i)(3GPP-|EUTRAN).*
+(?i)(?<=((cld_from|clg_from|orig|dest)(_usr|_app|DID)?(\s?))=?)([0-9]){1,100}
+(?i)(?<=((-- "|-- "")))([A-Za-z0-9]){1,100}
+(?<=(/os))([A-Za-z0-9(/)(_)(\.)]){1,100}
+(?i)(?<=(Response :|rn=)\s?)([A-Z0-9a-z\s+]){1,100}
+(?i)(?<=(=)(\s)?(\+))([\d]){1,100}
+(?i)(?<=(gurkes))([A-Za-z(\d)]){1,100}
+(?<=(dump '|Dump msg received :|Dump msg to send entity))([A-Za-z(\d)(\s)(_)(,)(:)(-)]){1,100}
+(?<=(sig|sepRf_grpId)(\s?)=)([0-9]){1,100}
+(?i)(?<=(key=))[0-9]*
+(?i)(?<=(context)(.)([_a-z]{1,100})(\)(\*){0,100}\s?)(:|=)\s?).*
+(?i)((Data to send:))
+(?<=(object found)\s?)(=)(\s?[A-Za-z(\d)(\s)(_)(,)(:)(-)(=)]).*
+(?<=(tel|sip)\s(uri parameters)\s?)(=)(\s?[A-Za-z(\d)(\s)(_)(,)(:)(-)(=)]){0,100}
+(?<=(pid)(\s?)=)([0-9]){1,100}
+(?i)(?<=(\.cld\)|\.sms_cld\)|\.cld_before_hrm_cutpaste\)|\.cld_before_hrm\)|\.original_num\)|\.idp_orig_cld\)|\.before_harm_cld\)|\.hrmrulesaddr_prefix\)|\.setaddr_prefix\)|\.hrmonized_cld_dump\)|\.cld_alarms\)|\.gen1\)|\.servicekey\)|\.setserv_key\)|\.corrid1\)|\.hto_corr_id\)|\.duninitprmsst3\)|\.str_corr_hto\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.o_addr_info\)|\.dial\)|\.str_cld_lrn\)|\.gntcld\)|\.lnb_sndlog_cld_harm\)|\.nbr_dgt\)|\.lnb_sndlog_frc_nbr\)|\.cld_harmonized\)|\.clg_harmonized\)|\.num_dharmonized\)|\.clg_dharmonized\)|\.lnb_snd_log_dstnbr\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.frcnumber\)|\.gen1_dharmonized\)|\.red_nbr_harmonized\)|\.dummy_cld\)|\.collected_num\)|\.cld_lrn\)|\.sstp_lrn\)|\.a_sstp_lrn\)|\.lnbr_dest_number\)|\.c_sstp_lrn\)|\.cld_sstp\)|\.lnb_save_cld\)|\.cld_save\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.clg_save\)|\.srcaddr\)|\.destaddr\)|\.frc_numb\)|\.sms_clg\)|\.caller\)|\.ncdr_ext_nbr\)|\.select_cld\)|\.gnp_cld\)|\.original_cld\)|\.cld_first\)|\.routnbrmn20\)|\.setdst_dg\)|\.tmp_nbr_cld\)|\.dump_cld\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.tmp_str_cld\)|\.clgtick_res\)|\.clgtick_msk\)|\.pref_cli_intl\)|\.lnum_clg_backup\)|\.tmpnum_sip_clg\)|\.tmpnum_sip_cld\)|\.dumplg_cld\)|\.clg_lrn\)|\.pref_cli_nat\)|\.own_ssn\)|\.dest_gt2\)|\.web_cld\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.lnum_flexi_clg\)|\.web_clg_ccode\)|\.web_clg\)|\.dsttno\)|\.msisdn_addr\)|\.prefix\)|\.lnum_gen1_back\)|\.add_cld\)|\.generic_name\)|\.loc_nbr\)|\.orig_addr_info\)|\.gt\)|\.setgt\)|\.loc_nbr_completed\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.lnb_snd_log_loc_nbr\)|\.sipuriuser_loc_nbr\)|\.li_age\)|\.li_cid_lai\)|\.li_geo\)|\.li_nbr\)|\.li_vlr\)|\.mnp_rn\)|\.cam_gt\)|\.own_gt1\)|\.smsnbr\)|\.clg\)|\.clg_completed\)|\.hostname\)|\.hosturi\)|\.ghostnumber\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.msisdn_addr1\)|\.msisdn_inter_c\)|\.msisdn_addr_c1\)|\.msisdn_addr_c\)|\.mnp_msisdn\)|\.msisdn_inter\)|\.wrk_nbr\)|\.mn20\)|\.cld_barring\)|\.checkdest\)|\.cldnat\)|\.cld_b4_cnp\)|\.cld_se\)|\.last_alt_dest\)|\.csp_dest\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.num_to_test\)|\.before_dharm_number\)|\.cnp_called\)|\.dhrm_cld\)|\.cld_trans\)|\.setdest_nbr\)|\.after_dharm_first_num\)|\.first_destinate\)|\.lnb_dst_trtmnt_dstnbr\)|\.lnb_tepnumber\)|\.lnb_dst_trtmnt_adob\)|\.lnb_ivrDest\)|\.fBilledItem\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.clg_backup\)|\.cldtick_2\)|\.cldtick\)|\.ext_san\)|\.lnbr_before_connex\)|\.hrm_callg\)|\.z_lonp\)|\.sipuriuser_cld\)|\.sipuriuser_gen1\)|\.temp_cld_tdm\)|\.gen6\)|\.backup_gen1\)|\.lst_imm_range\)|\.inn_cld\)|\.odd_cld\)|\.odd_ocld\)|\.pres_ocld\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.spare1_cld\)|\.spare2_cld\)|\.spare1_ocld\)|\.spare2_ocld\)|\.domain_ocld\)|\.ocld\)|\.sipuriuser_ocld\)|\.ocldnat\)|\.join_domain_ocld\)|\.join_ocld\)|\.join_sipuriuser_ocld\)|\.lnb_snd_log_ocld\)|\.red_nbr\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.web_uri\)|\.web_domain\)|\.uri_add\)|\.sipuriuser_clg\)|\.join_sipuriuser_cld\)|\.join_sipuriuser_clg\)|\.join_sipuriuser_gen1\)|\.join_sipuriuser_gen2\)|\.join_sipuriuser_gen3\)|\.join_sipuriuser_gen4\)|\.join_sipuriuser_gen5\)|\.join_sipuriuser_gen6\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.join_sipuriuser_red_nbr\)|\.select_sipuriuser_cld\)|\.sipuriuser_gen2\)|\.sipuriuser_gen3\)|\.sipuriuser_gen4\)|\.sipuriuser_gen5\)|\.sipuriuser_gen6\)|\.sipuriuser_red_nbr\)|\.sipuri_refer_to\)|\.refer_to_domain\)|\.refer_to_user\)|\.tfr_nbr_num\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.wrk_nbr_new\)|\.inNumber\)|\.sipuri_refer_to1\)|\.unused\)|\.clg_cdr\)|\.orig_clg\)|\.str_sipuriuser_clg\)|\.sip_clg_extract\)|\.clgtick\)|\.hrm_clg\)|\.clg_alarms\)|\.tempdest\)|\.cnp_calling\)|\.ncdr_code_nbr\)|\.setcli_user\)|\.clg_trans\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.setcli1\)|\.fwdcind\)|\.domain_loc_nbr\)|\.domain_red_nbr\)|\.spare1_red_nbr\)|\.spare2_red_nbr\)|\.addclg\)|\.ni_addclg\)|\.ni_clg\)|\.qual_addclg\)|\.odd_red_nbr\)|\.join_red_nbr\)|\.tdomain_red_nbr\)|\.pres_red_nbr\)|\.join_gen1\)|\.gen2\)|\.join_gen2\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.gen3\)|\.join_gen3\)|\.gen4\)|\.join_gen4\)|\.gen5\)|\.join_gen5\)|\.join_gen6\)|\.psi_imsu\)|\.psi_str\)|\.setdsttno\)|\.lnb_sndlog_clg\)|\.cli_trans\)|\.setclg_nbr\)|\.num_received\)|\.gnp_clg\)|\.temp_clg_bsn\)|\.temp_clg_idbsn\)|\.temp_clg_idbsn2\)|\.clg_barring\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.clg_backup_eti\)|\.area_pfx\)|\.servnumb\)|\.input_string\)|\.out_string\)|\.mcc1\)|\.mnc1\)|\.lac1\)|\.mnc\)|\.lac\)|\.mcc\)|\.addr_prefix\)|\.setfrcnbr\)|\.setcld_nbr\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)]){1,100}
+(?i)(?<=(\.st_icid\)|\.sep_hostname\)|\.etc_srpnbr\)|\.srpnbr\)|\.sip_stack_add_port\)|\.port_san_sent\)|\.clgport_chk_b\)|\.dest_stack_add_port\)|\.typ_platform\)|\.icid\)|\.host_ip_infin\)|\.webpin\)|\.frcroot_webpin\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)(\-) ]){1,100}
+(?i)(?<=(\.host_ip_icid\)|\.domain_cld\)|\.domain_clg\)|\.contact\)|\.ip_slee1\)|\.st_call_id\)|\.ip_vxml\)|\.str_slee_host\)|\.call_id\)|\.mrffqdn\)|\.mrf_fqdn\)|\.refer_by_domain\)|\.web_pin\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)(\-)]){1,100}
+(?i)(?<=(\.domain_colp\)|\.join_domain_cld\)|\.join_domain_clg\)|\.join_domain_red_nbr\)|\.redirect_domain_cld\)|\.dis_domain_cld\)|\.select_domain_cld\)|\.mrp_domain\)|\.contact_header\)|\.psi_imsd\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)(\-)]){1,100}
+(?i)(?<=(\.from_email\)|\.frm_email\)|\.name_to\)|\.callid_outgoing\)|\.icid_final\)|\.st_call_id_alarms\)|\.join_call_id\)|\.refer_to_callid\)|\.callid_outgoing_lhg\)|\.callid_outgoing_final\)|\.outgoing_refer_callid_old\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)(\-)]){1,100}
+(?i)(?<=(\.outgoing_refer_callid_new\)|\.outgoing_refer_callid\)|\.callid\)|\.orig_ioi\)|\.join_icid\)|\.icid_id\)|\.web_cld_temp\)|\.sip_cld_extract\)|\.country_name\)|\.country\)|\.setcountry_ref\)|\.mob_network_code\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)(\-)]){1,100}
+(?i)(?<=(\.tracking_area_code\)|\.origin_code\)|\.ccode\)|\.ccode_ngn\)|\.mob_country_code\)|\.str_clg_ccode\)|\.str_clg_ccode_chk\)|\.cust_code\)|\.cc_for_sip_uri\)|\.point_code\)|\.ua_invite\)|\.str_user_agent\)|\.str_opc\)|\.o_pc_uint\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)(\-)]){1,100}
+(?i)(?<=(\.setopc\)|\.str_ivm_opcode\)|\.st_cust_numb\)|\.lst_snd_log_customer\)|cust_name\)|\.gst_customer_info\)|custname\)|\.to_email\)|\.name_cc\)|\.cc_email\)|\.rboxprof_email\)|\.servdata_email\)|\.web_cld_str\))\s{0,1}(:|=| |)(\s{0,1})("){0,2}(\+){0,2})((?!LIKE)[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3(_)(\.)(@)(#)(\&)(:)(\.)(\/)($)(%)(\-)]){1,100}
+(?i)(?<=(\b(clg_nbr|cli_trans|san_nu|Combo1|mccode|mncode|locacode|CV_OCLD|CV_RED_NBR|san|var_imm_value|nbr_dgt|frcnbr|cld_nbr|i_nbrdgt))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Fa-f0-9_\.@#\&\.\/$%;-]){1,100}
+(?i)(?<=(\b(wrk_nbr|nbr2|dest_nbr|nbrdgt_value|NBRDGT|area|n2|nbr_blw|SRPNBR|ADOL_NBR|ADNR_NBR|ADOB_NBR|Z_ADOR_NBR|ADOC_NBR|CV_DIAL|CV_O_ADDR_INFO|cld|hrm_cld|loc_nbr|BLW_NBR|SRPNBR1))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Fa-f0-9_\.@#\&\.\/$%;-]){1,100}
+(?i)(?<=(\b(CV_MOB_COUNTRY_CODE|CV_MOB_NETWORK_CODE|CV_TRACKING_AREA_CODE|tc_code|add_zipcode|c_code|areacode|custcode|cust_ccode|flg_postal_code|gt|Sccp_ver))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})((?!CHR)[A-Fa-f0-9_\.@#\&\.\/$%;-]){1,100}
+(?i)(?<=(\b(mbr2_rf|mbr3_rf|mbr4_rf|mbr5_rf|mbr6_rf|mbr7_rf|mbr8_rf|mbr9_rf|mbr10_rf|mbr11_rf|mbr12_rf|mbr13_rf|mbr14_rf|mbr15_rf|mbr16_rf|mbr17_rf|mbr18_rf|mbr19_rf))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Fa-f0-9_\.@#\&\.\/$%;-]){1,100}
+(?i)(?<=(\b(userpci|domainpci|own_gt1|CV_SCF_ADR|msc_id|smsc_id|destaddr|srcaddr|acs_code|sms_numb|upin|areadg|addr_prefix))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(dst_dg|cld_trans|global_phone_number|phone_number|CV_SIPURIUSER_CLD|CV_CLD|CV_SIPURIUSER_GEN1|CV_GEN1|immdval|imm_value|immval))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(immvalue|lv_input_value_nb|CV_CMP_IMM_RANGE|tmp_immdval|userd|OCLD|usero))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Fa-f0-9_\.@#\&\.\/$%;-]){1,100}
+(?i)(?<=(\b(CV_SIPURIUSER_GEN2|CV_SIPURIUSER_GEN3|CV_SIPURIUSER_GEN4|CV_SIPURIUSER_GEN5|CV_SIPURIUSER_GEN6|SIPURIUSER_CLG|SIPURIUSER_GEN1|CV_WEB_URI|ruri|CV_WEB_PIN))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(ccode|mn20|input1|input2|CV_SELECT_SIPURIUSER_CLD|bufReqURIrn|SIPURIUSER_GEN2|CV_SIPURIUSER_OCLD))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(hostname|CV_SIPURIUSER_CLG|genename|name_cc_copy|copy2|adnl_info_copy))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(CV_WEB_CLG_CCODE|CV_WEB_CLG|CV_WEB_CLD|tcode|frc_numb|CV_CLG|greyn|pin|cli_user|clg_trans|clg_tranc|clg))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Fa-f0-9_\.@#\&\.\/$%;-]){1,100}
+(?i)(?<=(\b(content|uri_add|CV_SIPURI_REFER_TO1|Host|mshost|psihost|addr|cwi_link|CV_HOST_IP_ICID|nodename))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(ssaddprt|sin_port|portNb|camshost|camsport|port|service|IP_ADDR|CV_IPADDR|iPaddr|CV_IPADDRESS|CV_DOMAIN_CLD))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(CV_DOMAIN_CLG|domaind|domaing|psi_imsd|peerIpAddr|hd_val00|ipad|CV_CONTACT|mrf_fqdn|domain|domaino|domainr|domainreferby|domainrf|domainrn|domainp))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%-]){1,100}
+(?i)(?<=(\b(GENERIC_NAME|useradg1|from_email|name_cc|name_to|CALL_ID|callid|msvidhost|ms_pref|CV_REFER_TO_CALLID|msconfhost|msconfuser|mstype|arr|countrycode|country|country\(\)))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(def_dest|dest_lim|dest_nr|dest_ob|dest_oc|CV_DEST_NUM|dest_or|DEST_RF|ORG_RF|lstport|prxyport|prxyaddr))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(mbr20_rf|frc_num|wiscode|code|destination|SERV_KEY|BA_REF|cellid|lac_tac|mcc|mnc|Z_SRC_ADDR|dest_nom))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(z_crecd_path|final|PWD9|pin_nb|s_in12|s_in13|webpin|sms|vlr|z_cli|cug_val|SLEE_MN|extip1|intip2|intip1|SLEE_REF|SLEEMN|MN))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(opc|opc\)|CV_UA_INVITE|opc1|add_city|add_fax|add_pobox|add_street|add_strno|add_tel1|add_tel2|cont_mobno|mob_no|adnl_info|psi_imsu|src_addr|hlr_add|cont_telno))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\. \/$%;-]){1,100}
+(?i)(?<=(\b(hlr_ssn|z_nfs_path|z_toll_no|companymn|email|rboxprof_email|vmail_email|servdata_email|Email_msg|voicemail_id|mail_cmd|email_id_pw))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(log_src_ip|domainname|cpp_email|email1|str|z_ann_path|crecd_path|FIRSTLOGIN))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(mn10|san_rf|RING_TO|FCHARGED_PARTY_IDENTITY|SMSNUMB|gmn15|tempString|OWN_RI|old_buf|OWN_RF|CAMSUSER|MSVIDUSER|msuser|CV_CLG_NUM|EKta))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(buf|san_dgt|root_val|frcroot_val|DSTPIN|DSTTNO|FCHARGEDPARTYID|PREDEST|QDEST_NO|SERVNUMB|PREF_CLI_INTL|PREF_CLI_NAT|s_in3|s_in8|URL))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(s_in4|LOC_TACACODE|mrf_loc|servprof|custnumb|old_ownrf|SCF_ID|d1|z_hlr_ssn|mbr1_rf|mrffqdn))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(cust_name|custname|firstname|custname1|username|z_mob_no|LASTNAME|CUSTO))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%;-]){1,100}
+(?i)(?<=(\b(mn40))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%; -]){1,100}
+(?i)(?<=(cld|sms_cld|cld_before_hred_cld_dump|cld_alarms|\bgen1)\s{0,1}(:|=| )(\s{0,1})("){0,2}(\+){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(stndby_host)\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:;\.\/$%;-]){1,1000}
+(?i)(?<=(this)\s{0,1}(=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(number)\s{0,1}(=|:)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Fa-f0-9]){1,100}
+(?i)(?<=(password_new|new_pw|password|pwd1|pwd2|pwd3|pwd4|pwd5|pwd6|pwd7|pwd8)\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%;^\-/(/)\?/!=]){1,100}
+(?i)(?<=(\b(CalledPartyNumber|CallingPartyNumber|AdditionalCallingPartyNumber))\s{1,3}("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;]){1,100}
+(?i)(?<=(\buser)\s{1,3}("){1,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%; ]){1,100}
+(?i)(?<=(\b(frameId|Reference, value|Reference))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%; -]){1,100}
+(?i)(?<=(\b(input|temp))\s{0,1}(=|:)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(audio|CV_OUT))\s{0,1}( )(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(\b(i_lac|i_gm))\s{0,1}(=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.,\/$%;-]){1,100}
+(?i)(?<=(clg_numb)\s{0,1}(=)(\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.,\/$%",';-]){1,100}
+(?i)(?<=((\b(subject|text_email))\s{0,1}(=)(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"\[\]|\* ]){1,500}
+(?i)(?<=((\b(Input number|Number before extraction|Input number after extraction|Full number|nbcomb\[0\]|Calling number|Before Swap String|After Swap String|After Swap new String))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=(((Before Swap String|After Swap String)\s{0,1}([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]){0,20})\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((\b(String is|After Swap new String|ora_num\.arr|arr\[i\]|num\[i\]|clg_numb\[i\]|san\[0\]|Extracted value is|number before adding|number after adding))\s{0,1}(:|=| )(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((\b(getObject\())("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((\b(Compare with number|Before Swap String dra_str|Before Swap String str|Generic name received|My global title is))\s{0,1}(:|=| )(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((\b(idsbsv cld|msisdn is|dest GT is|Index Value is|Digits extracted|Number before removing|Phone Number|Prefix number))\s{0,1}(:|=| )(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((\b(IsNumeric operation for|Connecting to|progress to|IN IP4|Not Connecting to|SMS Number))\s{0,1}(:|=| )(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((\b(Phone Number|Global Title))\s{0,1}(:)(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((\b(fchargd_party_identity\[0\]|fchargd_party_identity\[1\]|fchargd_party_identity\[2\]|fchargd_party_identity\[3\]|fchargd_party_identity\[4\]|fchargd_party_identity\[5\]|fchargd_party_identity\[6\]|fchargd_party_identity\[7\]))\s{0,1}(:|=| )(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((\b(Digits to remove|Number after removing|Global Title is|peer_ip_addr value|initialized with|truncated to|att1\[1\]))\s{0,1}(:|=| )(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((using CLD|using SIPURIUSER_CLD|using CLG|using SIPURIUSER_CLG|using OCLD|using SIPURIUSER_OCLD|using RED_NBR|using SIPURIUSER_RED_NBR|using GEN1|using SIPURIUSER_GEN1|using GEN2|using SIPURIUSER_GEN2|using GEN3|using SIPURIUSER_GEN3|using GEN4|using SIPURIUSER_GEN4|using GEN5|using SIPURIUSER_GEN5|using GEN6|using SIPURIUSER_GEN6|using RTN)(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]){1,100}
+(?i)(?<=((\b(CV_STRINGIN|CV_STRINGOUT|Dump value|searchkey|comd))(=)("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"\',\-\+;\[\]|\*\`\@!|\=\~\\ ]+)
+(?i)(?<=((\b(cdrdumpstr\)|str_cdrdumpstr_bck\)|str_cdrdumpstr_bck1\)|str_cdrdumpstr_bck2\)|setcdr_dump_str\)|lst_fep_ltsce\)|lst_FciSci_ltsce\)|ivr_ltsce_str\)|lst_concat_routnbr\)|routnbr_dstdmp\)))\s(=)\s("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"`',\-\+;\[\]|\*\\ ]+)
+(?i)(?<=(costat.cxx.[0-9]{1,20}:\s[0-9]{1,20}\-\>))([0-9a-zA-Z]*\s[0-9a-zA-Z]*\s[0-9a-zA-Z]*\s[0-9a-zA-Z]*\s[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"',\-\+;\[\]`@!|=~\*\\ ]+)
+(?i)(?<=(septransp.cxx.[0-9]{1,20}:\s[0-9]{1,20}\-\>))([0-9a-zA-Z]*\s[0-9a-zA-Z]*\s[0-9a-zA-Z]*\s[0-9a-zA-Z]*\s[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"',\-\+;\[\]`@!|=~\*\\ ]+)
+(?i)(?<=(->\s{1,3}[0-9A-Fa-f]{1,2}\s[0-9A-Fa-f]{1,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"\',\-\+;\[\]|\*\`\@!|\=\~\\ ]+)
+(?i)(?<=((dialledDigits|calledPartyNumber|callingPartyNumber|calledPartyNumber|aChBillingChargingCharacteristics|locationNumber|subscriberIdentitymsisdn|gsmSCF\-Address|vlr\-number|cellIdOrLAIcellIdFixedLength|cellIdFixedLength|locationNumberB)\s{0,1}'))([0-9a-fA-F]){1,100}
+(?i)(?<=((msc\-Number|GENERIC_NAME|msisdn|geographicalInformation|ipRoutingAddress|sCIBillingChargingCharacteristics|serviceNumber|destination|key|valuestringValue|originalCalledPartyID|redirectingPartyID|otid|dtid|chargedPartyID|stringValue)\s{0,1}'))([0-9a-fA-F]){1,100}
+(?i)(?<=((assistingSSPIPRoutingAddress|scfID|additionalCallingPartyNumber|redirectionInformation|ipRoutingAddress|calledNumber|callingNumber|valuestringValue|destination|mn|dump)\s{0,1}'))([0-9a-fA-F]){1,100}
+(?i)(?<=((genericName)\s{0,1}'))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\. ,\/$%;-]){1,100}
+(?i)(?<=((output|context|otid|dtid|digits|chargedPartyID|otid\)|dtid\)|CV_OBJ_TYPE|assistingSSPIPRoutingAddress Initialized)\s{0,1}(=|:)\s{0,1}'))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\. ,\/$%;-]){1,100}
+(?i)(?<=((Correlation ID|lv_address|Routing Address in the dump|SSN|ssn0|o_ssn\)|cellidentity|CV_CELL_IDENTITY|cell_identity\))\s{0,1}(=|:)\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\. \/$%-]){1,100}
+(?i)(?<=((\b(Combo1|Combo2|Combo3|Combo4|Combo5|Combo6|Combo7|Combo8|Combo9|Combo10|Combo11|Combo12|Combo13|Combo14|Combo15|Combo16|Combo17|Combo18|Combo19|Combo20|Combo21|Combo22|Combo23|Combo24))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Fa-f0-9_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((270778834|3100\.2\.122\.3|3100\.2\.10\.2|3100\.2\.10\.3|3100\.2\.11\.2|3100\.2\.11\.5|3100\.2\.12\.2|3100\.2\.12\.3|3100\.2\.12\.4|3100\.2\.12\.6|3100\.2\.20\.2|3100\.2\.20\.4|3100\.2\.33\.2|3100\.2\.40\.1|3100\.2\.40\.2|3100\.2\.42\.4|3100\.2\.118\.7|3100\.2\.119\.1|3100\.2\.11\.4|3100\.2\.46\.4|3100\.2\.46\.6|3100\.2\.41\.1|3100\.2\.10\.10|3100\.2\.12\.5|13000\.48\.1\.1|13000\.44\.1\.1|13000\.44\.1\.2|14000\.4\.1\.1|14001\.2\.1\.1|14001\.2\.1\.2|3100\.2\.41\.1|14001\.1\.1\.6|14001\.1\.1\.7|3100\.2\.122\.10|3100\.2\.82\.2|3221\.3\.90\.5|3161\.4\.51\.2|3100\.2\.42\.7)\s{0,2}(Dump)(:)\s{0,2}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.,\/$%;-]){1,100}
+(?i)(?<=((vlr number is|Cell ID is|CV_ORIGIN_NUM|clg|num_s|clg_str|Domain Calling|s_addr|\bfrcnum|i_frc|i_areadg|i_post_code|num_received\)|dhrm_clg\)|dump_cld\)|lnb_sndlog_cld\))\s{0,1}(=|:| )\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((nupr_[0-9]{1,20})\s{0,1}(=|:| )\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\. ,\/$%;-]*)
+(?i)(?<=((\bl_in\b|s_In|s_in1|chgptyid)\s{0,1}(=|:| )\s{0,1}))((?!SELECT)([0-9A-Za-z@#\&:\. \/$%;]+))
+(?i)(?<=((\b(GetString\(\)|cld_trans\(\)|number2uint\(\)|clg_trans\(\)))(=)("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"\',\-\+;\[\]|\*\`\@!|\=\~\\ ]+)
+(?i)(?<=((voicexmlurl|voicexmlurl\))\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"\'\-\+;\[\]|\*\`\@!|\=\~\\]+)
+(?i)(?<=((hostname|str_http_sepg\)|domain_pchargeinfo\))\s{0,1}(:|=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;]){1,100}
+(?i)(?<=((\bPATH=\/|\buri=\/|\bGET \/)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;]){1,100}
+(?i)(?<=((camshost|camsport|psiuser|psihost|mshost)\(\)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]){1,100}
+(?i)(?<=((mail_cmd|email_cmd\)|final_input)\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"\',\-\+;\[\]|\*\`\@!|\=\~\\ ]+)
+(?i)(?<=((WHERE CLI IN \(|WHERE CLG IN \(|WHERE NBR_DGT IN \()('){0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.,\/$%",';-]){1,100}
+(?i)(?<=(host\s\([0-9]{1,20}\)\sRowId:\s[0-9]{1,20}\sMnemonic:\s))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]+)
+(?i)(?<=(custom\s\([0-9]{1,20}\)\sRowId:\s[0-9]{1,20}\sMnemonic:\s))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$% ;\-]+)
+(?i)(?<=((par_index,c\)\)|select_index,c\)\))\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]){1,100}
+(?i)(?<=(:Translated Number=[0-9]{1,15}\)))([0-9]+)
+(?i)(?<=(\bname=))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]+)(?=((\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})))
+(?i)(?<=(ssn is)\s)([0-9]+)
+(?i)(?<=((SCCP address orig|SCCP address dest|o_pc\)|o_pc_numb\)|i_opc|orig_pc\)|orig_ssn\)|custnumb\))\s{0,1}(=|:| )\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\. \/$%]){1,100}
+(?i)(?<=((jsessionid|sid|LOG_SESSION_ID|sessionId)\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]){1,100}
+(?i)(?<=((\bSession)\s("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]){1,100}
+(?i)(?<=((custo_buf|email1|email)\(\)\s{0,1}(=)\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]){1,100}
+(?i)(?<=(((chkemail|chkemail|chklogin|chkphn_num|chkstr)\sfrc_[0-9]{1,20}.[0-9]{1,20})\s{0,1}(=|:)\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]"',$%;\- =]){1,100}
+(?i)(?<=(([a-zA-Z]{1,20}Cons)(.)(cxx)(.)([0-9]{1,20})(:)(\s{0,1})))([0-9]+)
+(?i)(?<=((helpgen\.pcxx\.)([0-9]{1,20})(:)(\s{0,1})(elem)(\s{0,1})([0-9]{1,20})(\s{0,1})(:)(\s{0,1})))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\- =]){1,100}
+(?i)(?<=((chkstr2 standbyhost)(.)([0-9]{1,20})(:)(\s{0,1})))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\- \[\]=]){1,100}
+(?i)(?<=(<(adoc_nbr|adol_nbr|qdest_no|opc1|scf_id|srpnbr|srpnbr1|loc_tacacode|mrf_loc|z_hlr_ssn|mccode|mncode|url|item|own_rf|san_rf|blw_nbr|own_ri|camsuser|ms_pref)\s(xsi:type="xsd:string">)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\+\&:\.\/\[\]"',$%;\- =]+)
+(?i)(?<=((CELLID|LAC_TAC|MCC|MNC|CLD|FRC_NUM|LOC_TACACODE|CLI|MNCODE|MCCODE|ADD_POBOX|SMS_NUMB|TC_CODE|AREADG)\sLIKE\s'))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]",$%;\- =]+)
+(?i)(?<=((ACS_CODE|FRC_NUMB|VLR|SCF_ID|SRPNBR|SRPNBR1|OPC1|CLG_NBR|P_CODE|OWN_GT1|GREYN|LOCKED_BY|JSESSIONID)\sLIKE\s'))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]",$%;\- =]+)
+(?i)(?<=((MRF_LOC|URL|ADD_ZIPCODE|ADD_CITY|ADD_STRNO|ADD_STREET|GMN15|FCHARGEDPARTYID|MN10|URI_ADD|EMAIL|SMS|CAMSUSER|MSCONFUSER|MS_PREF|ipaddr|dest_por|owner|pass|sys_id|sys_ty)\) LIKE UPPER\('))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]",$%;\- =]+)
+(?i)(?<=((MSVIDHOST|MSVIDUSER|MSCONFHOST|CAMSHOST|CAMSPORT|MSUSER|MSTYPE|MSHOST|MN20|HOSTNAME|SUBJECT|NAME_CC|NAME_TO|COMPANYMN|TEXT_EMAIL|SRC_ADDR|C_CODE)\) LIKE UPPER\('))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]",$%;\- =]+)
+(?i)(?<=((sep_ref)(=|=")))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]+)(?=((\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]{1,20})))
+(?i)(?<=((url|predest|dsttno_buf|nbr_dgt|own_ri_buf|custo_buf|gmn15|cli|frc_numb|slee_ref_buf|upin|AREADG|nbr_blw|frc_num|gt|own_ri_custom\(\)\)\->key|opc|serv_key|clg|mcc|mnc|cellid|lac_tac|from_email|rout_dest_buf|org_rf|dest_rf)\(\)\s{0,1}(=|:|=")\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-=]){1,100}
+(?i)(?<=((FCHARGD_PARTY_IDENTITY|rbody|rbody\)|in_bytestring\)|\bmsg\b|msgTab\[fd\])\s{0,1}(=)\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:"'\.\/"$%;\-=]+)
+(?i)(?<=(((gmn15|loc_tacacode|P_CODE|greynumb|grlist|greypin|gt|mcc_data|mnc_data|cellid_data|lac_data)\s{0,1}(=|:|=")\s{0,1})))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-=]+)
+(?i)(?<=((a02custo\.[0-9]{1,20}:\s)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-=\(\)> ]){1,100}
+(?i)(?<=((destinationRoutingAddress|genericNumbers)\s[A-Za-z\-\s\{\/]{1,100}(\')))([A-Fa-f0-9]+)
+(?i)(?<=((dump\s{0,1}:\s{0,1})))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]+)(?=((\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]{1,20})))
+(?i)(?<=(shmwr\-[0-9]{1,10}\-))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3\-\.]+)
+(?i)(?<=(Server\s{0,1}(:)\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\- =]){1,100}
+(?i)(?<=((\b(DEST_POR|ipaddr|host|owner|pass|sys_id|sys_ty|pinfo1|New hostinfo|source_addr|source_addr1|string to copy|CV_SRC_ADDR|CV_DEST_ADDR|src_addr|destination_addr|destination_addr1|c_str\(\)|Port number|host address))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;-]){1,100}
+(?i)(?<=((\b(DEST_POR|ipaddr|owner|pass|sys_id|sys_ty|pinfo1|src_addr_fin|srcaddr|dest_addr_fin|destaddr|src_addr|str_hosts))(\))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/,$%;-]){1,100}
+(?i)(?<=(User Id\s|portstr|HostName\(\)|\bport\s))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-=]+)
+(?i)(?<=(stndby_host\))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:;\.\/$%;-]){1,1000}
+(?i)(?<=((hostname\)|wrk_nbr\)|cli1\)|cli1|\bfrcnum\)|uname|extip1|intip2|intip1|nt0_a1|\bmyUid|\bmyeUid|\buid|acc_id|smsc_id|REMOTEIP|z_vmail_path)\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]){1,100}
+(?i)(?<=((\b(setcdr_dump_str|cdr_dump_str)|cdr_dump_str\))\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"`',\-\+;\[\]|\*\\ ]+)
+(?i)(?<=(Index Value is:\s))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\ -=]+)
+(?i)[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}
+(?i)(?<=((item,c\)\)|test2|\bFs\b|\bval\b|\bCorrID\b|collected_digits|duninitprmsst[0-9]{1}|duninitprmsst[0-9]{1}\))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:;\.\/$%;-]){1,1000}
+(?i)(?<=(\b(asc|ora))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\. \/$%;-]){1,100}
+(?i)(?<=((\bGroup)\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;]){1,100}
+(?i)(?<=(\bGroup:\s))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]+)(?=((\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})))
+(?i)(?<=(shmdbsrv\-))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3\-\.]+)
+(?i)(?<=(fepsoap\-))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3\-\.]+)
+(?i)(?<=(\bDump:\s))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]+)(?=((\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]{1,20})))
+(?i)(?<=((SepName)\s{0,1}(:|=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;]+)(?=((\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]{1,20})))
+(?i)(?<=((z_sec_ans1|z_sec_ans2|port_san_sent\))\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%; \-]){1,100}
+(?i)(?<=((Call-ID|Domain Calling|CUSTOMER|to SSTP|Host Name|customer_name|Red_Nbr|\bOcld\b|\bClg\b)\s{0,1}(:|=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]"'$%;\-\^\* =]+)
+(?i)(?<=(((\bud|\bshared_userdist|\binit_gp3|\btserver|\bgp2_proc|\bgp2_tcp).cxx.[0-9]{1,20}:\s[0-9]{1,20}->)))([0-9a-zA-Z]*\s[0-9a-zA-Z]*\s[0-9a-zA-Z]*\s[0-9a-zA-Z]*\s[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%^!>?<\(\){}"',\-\+;\[\]`@!|=~\*\\ ]+)
+(?i)(?<=(DUMP:\s))([a-fA-F0-9]*,[a-fA-F0-9]*,[a-zA-Z\s]*,[a-zA-Z\s]*,[a-zA-Z\s]*,[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3\s]*,[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3\s]*,[A-Za-z0-9\u0100-\u01ff\u00d3\u00f3\s]*)
+(?i)(?<=((Call-ID|Calling Party Category|Domain Calling|CUSTOMER|ICID|Translated Number|SMS Number|Calling number|Nat-Cld|frcroot\.own_ri|Domain Calling)\s{0,1}(:|=)\s{0,1}([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]"',$%;\- =]{1,100})(\))))([0-9A-Fa-f]{4,100})
+(?i)(?<=((ICID)\s{0,1}(:|=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]\(\)$%;\-\^\* =]+)
+(?i)(?<=((origioi|userg|key in if|cld_eti\)|b_number\)|tmp_clg\)|dst_dg\)|rout_nbr\)|corelation_id\)|temp_enroute\)|clgtick_mask\)|filename|tmppath|tmpstr_bgg_dgk\)|sethrm_cld\)|tmpstr_ffc_hgi\)|key_used\)|fChargedPartyId\)|strin\)|sipuriuser_pchargeinfo\))\s{0,1}(:|=)\s{0,1}("){0,2}(\+){0,2}('){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\]\(\)$%;\-\^\*]+)
+(?i)(?<=((mn|dump)\s{0,2}(')([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]{1,100})(')(H)\s{0,2}([\-]{0,3})\s{0,2}("){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/\[\],$%;=]){1,100}
+(?i)(?<=((OBJ:sep#[0-9]{1,10}#)|(OBJECT:sep#)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3]+)(?=((\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})(\-)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_]{1,20})))
+(?i)(?<=(\b(line))\s{0,1}(:|=)(\s{0,1})("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%; ,=\-]){1,100}
+(?i)(?<=((lst_copy_mainstring\)|lst_xtrct_substr\)|lst_copy_substring\)|gst_cli_info\)|lst_temp\)|gst_san_info\)|STORING DETAILS|\bcli\b|frc_number|lstr_collate))\s{0,1}(=|:)\s{0,1}("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;,=\-]+)
+(?i)(?<=((goa_tags\(i\)|goa_tags))\s{0,1}(=|:)\s{0,1}("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;, =\-]+)
+(?i)(?<=((san\[[0-9]{1,20}\]))\s{0,1}(=|:)\s{0,1}("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;=\-]+)
+(?i)(?<=(fchrgparty\)|chgptyid|chgptyid_plus_30|passage|dest_gt1|act_dest|dest_gt2|dest_gt1\)|sstpgt\)|\blrn|\bi_lrn|hrm_cld\)|FCIchPartyId\)|CV_VALUE[0-9]{1,3}|usr_pin|cld_prfx\))\s{0,1}(=|:)\s{0,1}("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;=\-]+)
+(?i)(?<=(mn20\))\s{0,2}(=|:)\s{0,2}("){0,2}(\+){0,2}('){0,2})([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;=\-]+)
+(?i)(?<=(\bdinfo|idsbsv\.cxx\.[0-9]{1,20}(:)\scld))([A-Fa-f0-9]+)
+(?i)(?<=((number in the dump)\s{0,1}))([A-Fa-f0-9]+)
+(?i)(?<=((CV MORE OPT|cnx with dpe:|adres info :)\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%; ,"'=\-]+)
+(?i)(?<=((fCIBCCcs1)(=| )(')))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%; ,"'=\-]+)
+(?i)(?<=((&pParam\[[0-9]{1,10}\]=)|(pParam=0&))\s{0,10})([A-Fa-f0-9]+)
+(?i)(?<=((\btmp|ip_slee\)|str_clg\)|customers|areas_tag_num,c\)\))\s{0,2}(=)\s{0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%; ,"'=\-]+)
+(?i)(?<=((BAG Name|BASG Name)(\s{0,2})(:)(\s{0,2})))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%; \-]+)
+(?i)(?<=((chargedPartyID)(=)([A-Za-f0-9' \-]{1,100})(")))([0-9A-Fa-f]+)
+(?i)(Turk|Turkey|\bRSA\b|Telekom|VSNL|\bIndia\b|Arcor_VDF|Germany|Partner|Israel|Singpore|France|Spain|\bFET\b|Taiwan|Mobistar|Orange|Belgium|Poland|Czech|T-Mobile|Republic|MTSA|Canada|Kosovo|Costarica|Maktel|Macedonia|Telenet|Singtel|Netia|rishav|BSNL|rohit|Andorra|Colt|Ashish|Etisalat|Abhishek|Ranjan|Priyanka|Gaurav|Singhal|Abhay|Priyanka|Priyanka|Alka|Khandelwal|Anupama|Aggarwal|Rupesh|Navjeet|Ekta|ravi|Inderjeet|Deepshikha|vinay|Nabeel|Ahmad|Muqim|Sunil|Joshi|anil|rakesh|nidhi|deepika|harsh|avik|italia|singh|amit|kritagya|surbhi|Anand|arun|aatre|dinkar|shveta)
+(?i)(?<=((corr_id|str_htoinv|str_corr_id|lst_gen_bill_info|lst_bill_info|corelationid|mn10|etc_scf_id|scf_id|userpin|tree_name|dumidpst[1-9]{1,2}|lst_locnbr_b|lst_locnumb_from_begin|var_val[0-9]{1,2}|worknbr[1-9]{1,2}|lui_temp|lst_routnbrname|lst_xttbr_dstdg|menu3_number|tdm_corr|lnb_temp|tmpstr_sip_clg|tmpstr_sip_cld|matsan|\bupin)(\))\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\-:$%\+]){1,100}
+(?i)(?<=((CTX VARIABLE AFTER|dumicast[0-9]{1,2}|CV_LOCNUMBERB|dumidpst[0-9]{1,2}|SCPID|CV_ACCESSNETINFO|adob_nbr|adoc_nbr|z_prfx|adol_nbr|ador_nbr|VARIBALE after|return_nbr|collected digits|s_in\[i\])\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\&\-$%\+]){1,100}
+(?i)(?<=((Digit before traitement|digits dialled)\s{0,2}(:|=)\s{0,2}("){0,2}(\+){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\&\-:$%\+]){1,100}
+(?i)(?<=((\bi_mn)\s{0,1}(:|=)\s{0,1}("){0,2}(\+){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\&\-:,$%\+]){1,100}
+(?i)(?<=((adob_nbr|adoc_nbr|adol_nbr|ador_nbr|qdest_no|mn10|tc_code|toString|c_code)(\(\))\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\&\-:$%\+]){1,100}
+(?i)(?<=(CV_SCF_ID)(\s{1,10})(:)(\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\&\-:,$%\+]){1,100}
+(?i)(?<=(\baddinfo))([0-9]+){1,100}
+(?i)(?<=(\bnum:\s{0,1}))([0-9]+){1,100}
+(?i)(?<=((var_val[0-9]{1,2})\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\-:$%\+]){1,100}
+(?i)(?<=((GENERIC_NAME)\s{0,2}("){0,2}(\+){0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\&\-:,$%]){1,100}
+(?i)(?<=((\bc_code|companymn|custid_val|area_pfx|usr_pin|OSP_Ref|custid|win_rf|smstxt\[[0-9]{1,3}\]|i_greyn|tccode_uint|InternationalPrefix|asc_code|z_sec_ans2|z_sec_ans1|z_sec_qn1|z_sec_qn2)\s{0,1}(=)\s{0,1}("){0,2}(\+){0,2}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\&\-:$% \+]){1,100}
+(?i)(?<=(SMSTXT|smstxt00))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\&\-:&"'$%\+]+)
+(?i)(?<=(\btmpstr))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3\.@#\&:\.\/$%;\-=]+)
+(?i)(?<=(270778834|3100\.2\.122\.3|3100\.2\.10\.2|3100\.2\.10\.3|3100\.2\.11\.2|3100\.2\.11\.5|3100\.2\.12\.2|3100\.2\.12\.3|3100\.2\.12\.4|3100\.2\.12\.6|3100\.2\.20\.2|3100\.2\.20\.4|3100\.2\.33\.2|3100\.2\.40\.1|3100\.2\.40\.2|3100\.2\.42\.4|3100\.2\.118\.7|3100\.2\.119\.1|3100\.2\.11\.4|3100\.2\.46\.4|3100\.2\.46\.6|3100\.2\.41\.1|3100\.2\.10\.10|3100\.2\.12\.5|13000\.48\.1\.1|13000\.44\.1\.1|13000\.44\.1\.2|14000\.4\.1\.1|14001\.2\.1\.1|14001\.2\.1\.2|3100\.2\.41\.1|14001\.1\.1\.6|14001\.1\.1\.7|3100\.2\.122\.10|3100\.2\.82\.2|3221\.3\.90\.5|3161\.4\.51\.2|3100\.2\.42\.7)\s)([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\+\/$\?%;, -]){1,100}
+(?i)(?<=(#1=|#2=|#3=|#4=|#5=|#6=|#7=|#8=|#9=|#14=|#14=|#14=|collected digits=))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@\&:\.\/$%;\-]+)
+(?i)(?<=((((cause_ind\(context\.causind\)|cause_loc\(context\.cause_loc\)|numberin\(context\.lnum_flexi_gen1\)|numberout\(context\.lnum_flexi_gen1\)|cld\(context\.cld\)|clg\(context\.clg\)|inn_loc\(context\.inn_loc\)|hlc_interp\(context\.hlc_interp\)|numberin\(userlim_req\.cli_user\)|numberout\(object_attribute\.tags\.setfrcnum\)|odd_dial\(context\.odd_dial\)|val_cause\(context\.val_cause\)|odd_loc\(context\.odd_loc\)|stopstats\(context\.stopstats\)|current_xt\(context\.current_xt\)|cts\(context\.cts\)|numberout\(context\.user_cli\)|numberout\(context\.cupaste_rem_prfx\)|numberout\(context\.add_hrm_prfx\)|numberout\(context\.cutpaste_add_prfx\)|numberout\(context\.rpt_hrm_prfx\)|numberout\(context\.num_recieved\)|cirp_cause_cod\(context\.cirp_cause_cod\)|cirp_cause_ind\(context\.cirp_cause_ind\)|cirp_cause_loc\(context\.cirp_cause_loc\))\s{0,2}=)\s{0,2})))([A-Fa-f0-9]+)
+(?i)(?<=(CV_CTS\s{0,1}|CV_CURRENT_XT\s{0,1}|CV_ERROR_XT\s{0,1}|CV_ANN_NBR\s{0,1})=\s{0,1})([A-Fa-f0-9]+)
+(?i)(?<=((H\s{1,2}--\s{1,2})(")))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%; \-]+)
+(?i)(?<=(tab_connection_rec|tab_connection_old))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%; \-]+)
+(?i)(?<=(((stringout\(context\.str_save_generic_name\)\s{1,2}=)\s{1,2}("\+))))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%; \-]+)
+(?i)(?<=((w800sepg|Locked_by)(=)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%; \-]+)
+(?i)(?<=((max_cal_dur))=)([A-Fa-f0-9]+)
+(?i)(?<=((cld_numb|arr)(=)(')))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%; \-',]+)
+(?i)(?<=((origDID from header)|origDID):\s{0,1})([A-Fa-f0-9]+)
+(?i)(?<=((origDID|destDID|ora_rootxt|cld_tranc|max_cal_dur|SEQNB|sig|blackn|s_in1|nxt_00|rootxt|prv type|pid|status|Nxt|Ctxt Ref))=)([A-Fa-f0-9]+)
+(?i)(?<=((getDial)(.)))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%; \-':'*'=]+)
+(?i)(?<=((service|host|action|custom)\s{1,2}\())([A-Fa-f0-9]+)
+(?i)(?<=((((clg\(context\.clg\)|cld\(context\.cld\))\s{1,2}=)\s{1,2}\+)))([A-Fa-f0-9]+)
+(?i)(?<=((bufEvt\[[0-9]{1,100}\])(=)((platform\/common)|(platform\/userdist)|(platform\/platform))(,)([0-9]{1,100}(,)(sep,))([0-9]{1,100}(,))))([A-Za-z0-9]+)
+(?i)(?<=(CV_CURRENT_XT\s{0,1})(:)\s{0,1})([A-Fa-f0-9]+)
+(?i)(?<=((IP_ADDR|peerIpAddr|value)\s{0,1}(=)\s{0,1}))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%; \-':'*'=]+)
+(?i)(?<=((Locked_by)\s{0,2}(=)\s{0,2}(')))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%; \-]+)
+(?i)(?<=((\(('))))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&\.\/$%; \-',]+)
+(?i)(?<=(operator\s\([0-9]{1,20}\)\sRowId:\s[0-9]{1,20}\sMnemonic:\s))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]+)
+(?i)(sumit)
+(?i)(?<=(((a_prv_id|a_sub_id)\s{0,1}(=|:|=")\s{0,1})))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]+)
+(?i)(?<=(((serv_ref|srv_name|name|SepName|host|cdrsepgrp\)|cdrsepgrp|cnpsepgrp|frcsepgroup|inn_loc\)|routnbr|dhrm_prefix\)|Group|correlationID|osp)\s{0,1}(=|:|="|'|/)\s{0,1})))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]+)
+(?i)(?<=(((correlationID)\s{0,1}(=\')\s{0,1})))([A-Za-z0-9\u0100-\u01ff\u00d3\u00f3_\.@#\&:\.\/$%;\-]+)
+(?<=((calledPartyNumber|Called Number|Calling Party Number|callingPartyNumber|originalCalledPartyID|redirectingPartyID|locationNumber|additionalCallingPartyNumber|Input number|extraction|Called Number|Calling Party Number|iMSI|assistingSSPIPRoutingAddress|correlationID|scfID|port)\s{0,3})('|:)(\s{0,3}))([A-Za-z0-9]){1,30}
+(?i)(?<=(calledPartyNumber with|callingPartyNumber with|originalCalledPartyID with|redirectingPartyID with|locationNumber with|CV_OUT|additionalCallingPartyNumber with|destinationRoutingAddress.First\(\) with|iMSI with|port)\s{0,1})([A-Za-z0-9]){1,40}
+(?i)(?<=(lbs_calledPartyNumber|lbs_callingPartyNumber|lbs_locationNumber|lbs_IDP_originalCalledPartyID|lbs_IDP_redirectingPartyID|ls_calledPartyNumber|ls_callingPartyNumber|lbs_cld_in|lnb_in_DRA_num|lnb_DRA_org_nbr|lnb_clg_nbr|lbs_cld_in|lbs_dra|lbs_dra_next|lbs_dra_np|lbs_cld_in_np|lst_host_name|lnb_mrf_rn|lnb_aSSPIPRA_nbr|lnb_final|lst_aSSPIPRA_temp|lst_input|lst_userd|lst_userd_prnt|lst_correlationID_temp|lst_corrid_sip|object_attribute.ctr1.msuser|ctr1.msuser|lst_camshost|lst_camsport|lst_mshost|object_attribute.ctr1.mshost|ctr1.mshost|lst_camshost_2|ctr1.camshost|context.lst_in|lst_sep_name|lst_frc_serv|context.lst_serviceName|object_attribute.ctr1.camsport)(.|\))\s{0,1}(=)\s{0,1})([A-Za-z0-9(')(")(.)(\-)]){1,30}
+(?i)(?<=(destinationRoutingAddress)\s\{)([\s(--)(/)A-Za-z0-9('|")(.)]){1,100}
+(?i)(?<=(lbs_CNCToriginalCalledPartyID|lbs_originalCalledPartyID|lbs_redirectingPartyID|lbs_CNCTdestinationRoutingAddress_first|lbs_destinationRoutingAddress|lbs_CNCTcallingPartyNumber|lbs_CNCTdestinationRoutingAddress_next|lbs_CNCTredirectingPartyID)(.|\))\s{0,1}(=)\s{0,1})([A-Za-z0-9(')(")(.)(-)]){1,30}
+(?i)(?<=(destinationRoutingAddress.First\(\)\:|destinationRoutingAddress->First\(\)\:))([(.)\s{0,1}A-Za-z0-9(:)])([^(\n)])*
+(?i)(?<=(SepName)(:)\s(?!pfm*))([(.)(\-)(_)A-Za-z0-9]){1,30}
+(?i)(?<=(SepName)(=)(')(?!pfm*))([A-Za-z0-9]){1,30}
+(?i)(?<=(destinationRoutingAddress.Next\(\)\:|destinationRoutingAddress->Next\(\)\:))([(.)\s{0,1}A-Za-z0-9(:)]){1,40}
+(?i)(?<=((Msg|Output string|available|resource|servicename|sig|sepRf_grpId|origDID|destDID|Mnemonic|pid|serv_ref|srv_name|NAME|genename)\s{0,3}(:|=)\s{0,3}))([A-Za-z0-9(/)(_)(.)(")(+)])*
+(?i)(?<=(OPERATION :)(\s))([/(\W\S)/A-Za-z0-9]+?)(?=(\nTIMEOUT =))
+(?i)(?<=(Group:\s))([A-Za-z0-9]+)*
+(?i)(?<=(,)(name|dumidpst1|ssaddprt|domaind|domaing|useradd|userd|msuser|mshost|camsport|camshost)(=))([A-Za-z0-9(.)(:)]+)*
+(?)(?<=(,)(hostname)(=))([A-Za-z0-9])*
+(?)(?<=(host)\s(:)\s)([A-Za-z0-9(.)])*
+(?i)(?<=(host)\s\(\d{0,100}\)\s(RowId)(:)\s\d\s(Mnemonic)(:)\s)([A-Za-z0-9]){1,30}
+(?<=(septransp.cxx.2084:|septransp.cxx.2095:)\s\d{4,4}(->))([/(\W\S)/A-Za-z0-9]){0,52}
+(?<=(septransp.cxx.1364:|septransp.cxx.1367:)\s\d{4,4}(->))([/(\W\S)/A-Za-z0-9]){0,52}
+(?<=(/*this|CV_FULLNUMBER)(=))([A-Za-z0-9])*
+(?)(?<=(siggenobj02.key)(=))([A-Za-z0-9])*
+(?<=(getObject\())([A-Za-z0-9])*
+(?i)(?<=(NAME=stat_tkt)(\s))([/(\W\S)/A-Za-z0-9]+?)(?=(\n\s))
+(?<=(costat.cxx.1629:|costat.cxx.1648:)\s\d{4,4}(->))([/(\W\S)/A-Za-z0-9]){0,52}
+(?i)(?<=(OBJ=)(\s))([/(\W\S)/A-Za-z0-9]+?)(?=(\n\s))
+(?<=(siggen02_14.10)(:))([A-Za-z0-9(\s)])([^(\n)])*
+(?)(?<=(siggenobjkey)(\s{0,1})(=)(\s{0,1}))([A-Za-z0-9])*
+(?)(?<=(camshost|camshost2)(>>))([A-Za-z0-9.])*
+(?)(?<=(Routing Number)(\s{0,3}))([A-Za-z0-9])*
+(?)(?<=(before|after)(\s)(adding)(\s)(:))([A-Za-z0-9])*
+(?)(?<=(CV_STRINGIN|CV_STRINGOUT)(=))([A-Za-z0-9(.)])*
+(?)(?<=(Host|dpe|node)(:)\s)([A-Za-z0-9(.)(:)])*
+(?)(?<=(HOST|Domain|nodename)(=))([A-Za-z0-9(.)(:)])*
+(?)(?<=(HOSTNAME)(=)("))([A-Za-z0-9(.)])*
+(?i)(?<=(NAME=log_tkt)(\s))([/(\W\S)/A-Za-z0-9]+?)(?=(\n\s))
+(?)(?<=(peerIpAddr)(=))([A-Za-z0-9(.)(:)])*
+(?)(?<=(peer_ip_addr value)(=)\s)([A-Za-z0-9(.)(:)])*
+(?i)(?<=(lst_alarmDump)(.|\))\s{0,1}(=)\s{0,1})([A-Za-z0-9(')(")(.)(\-)(\_)(\s)])*
+(?)(?<=(DUMP:\s))([A-Za-z0-9(')(")(.)(\-)(\_)(\s)])*
+(?)(?<=(OBJ:|OBJECT:))([A-Za-z0-9(')(")(.)(#)])*
+(?)(?<=(routetbl.cxx.185:)(\s))([A-Za-z0-9(')(")(.)(\_)(\-)(\s)])*
+(?)(?<=(platform/platform))([A-Za-z0-9(')(")(.)(\_)(\-)(\s)(,)])*
+(?)(?<=(camshost>>|camsport>>|camshost2>>|mshost>>))([A-Za-z0-9(')(")(.)(\_)(\-)(\s)(,)])*
+(?)(?<=(Object: Class: service\s))([A-Za-z0-9\(])*
+(?i)(?<=SSN=)([A-Za-z0-9_\\.@\+#\:\.\/\[\]"'$\- ]+)
+(?i)(?<=ssn\s)([A-Za-z0-9_\\.@\+#\:\.\/\[\]"'$\- ]+)
+(?i)(?<=pc=)([A-Za-z0-9_\\.@\+#\:\.\/\[\]"'$\- ]+)
+(?i)(?<=SPC=)(-?[1-9]\d*|0)
+(?i)(?<=opc=)(-?[1-9]\d*|0)
+(?i)(?<=PC\s)([A-Za-z0-9_\\.@\+#\:\.\/\[\]"'$\- ]+)
+(?i)(?<=in_dest_host_routing\s=\s)([A-Za-z0-9_\\.@\+#\:\.\/\[\]"'\-\() ]+)
+(?i)(?<=host=)([A-Za-z0-9\\.@\+\:\.\/\[\]"'\- ]+)
+(?i)(?<=by\s)([A-Za-z0-9\\.@\+\:\.\/\[\]"'\- ]+)
+(?i)(?<= port=)([0-9 ]+)
+(?i)(?<= port\s)([0-9 ]+)
+(?i)(?<=name=)([A-Za-z0-9_\\.@\+#\:\.\/\[\]"'$\- ]+)
+(?i)(?<=in_string0\s=)([A-Za-z0-9 ]+)
+(?i)(?<=cldprtnbr_digits\s=)([A-Za-z0-9 ]+)
+(?i)(?<=out_string0\s=)([A-Za-z0-9 ]+)
+(?i)(?<=inout_string0\s=)([A-Za-z0-9 ]+)
+(?i)(?<=inputString=)([A-Za-z0-9 ]+)
+(?i)(?<=cldnbr\s=)([A-Za-z0-9 ]+)
+(?i)(?<=in_string1\s=)([A-Za-z0-9 ]+)
+(?i)(?<=dstrtgadr_1_cldprtnbr_digits\s=)([A-Za-z0-9 ]+)
+(?i)(?<=CALLEDNUMBER=)([A-Za-z0-9' ]+)
+(?i)(?<=Orignal cld:)([A-Za-z0-9 ]+)
+(?i)(?<=out_string1\s=)([A-Za-z0-9 ]+)
+(?i)(?<=clgprtnbr_digits\s=)([A-Za-z0-9 ]+)
+(?i)(?<=with parameters\s:)([A-Za-z0-9,\( ]+)
+(?i)(?<=connectionId=)([A-Za-z0-9\\.@\+\:\.\/\[\]"'\- ]+)
+(?i)(?<=Connection\s)([A-Za-z0-9\\.@\+\:\.\/\[\]"'\-\(  ]+)
+(?i)(?<=user=)([A-Za-z0-9\\.@\+\:\.\/\[\]"'\- ]+)
+(?i)(?<=pass=)([A-Za-z0-9\\.@\+\:\.\/\[\]"'\- ]+)
+(?i)(?<=uname=)([A-Za-z0-9\\.@\+\:\.\/\[\]"'\- ]+)
+(?i)(?<=,calledNumber\s=)([A-Za-z0-9 ]+)
+(?i)(?<=,rPrefix1\s=)([A-Za-z0-9 ]+)
+(?i)(?<=,rPrefix2\s=)([A-Za-z0-9 ]+)
+(?i)(?<=,rPrefix3\s=)([A-Za-z0-9 ]+)
+(?i)(?<=,prefix\s=)([A-Za-z0-9 ]+)
+(?i)(?<=in_dump\s=\s)([A-Za-z0-9 ]+)
+(?i)(?<=dumpValue\s=\s)([A-Za-z0-9 ]+)
+(?i)(?<=present in\s\s)([A-Za-z0-9 ]+)
+(?i)(?<=digits present in\s)([A-Za-z0-9 ]+)
+(?i)(?<=not present in\s)([A-Za-z0-9 ]+)
+(?i)(?<=Called number\s)([A-Za-z0-9 ]+)
+(?i)(?<=for called number\s)([A-Za-z0-9 ]+)
+(?i)(?<=in_alarm_type\s=\s)([A-Za-z0-9 ]+)
+(?i)(?<=in_instance_id\s=\s)([A-Za-z0-9 ]+)
+(?i)(?<=in_message\s=\s)([A-Za-z0-9 ]+)

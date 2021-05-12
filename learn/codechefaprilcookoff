@@ -1,0 +1,4 @@
+import pickle
+
+x='a'
+pickle.dumps(x,3,True)
