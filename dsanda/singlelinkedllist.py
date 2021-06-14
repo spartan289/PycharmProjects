@@ -62,9 +62,12 @@ class LinkedList(object):
         newNode = Node()
         newNode.data = data
         current = self.head
-        while (current.next != None):
-            current = current.next
-        current.next = newNode
+        if self.length == 0:
+            self.head = newNode
+        else:
+            while (current.next != None):
+                current = current.next
+            current.next = newNode
         self.length += 1
 
     def insertatPosition(self, data, position):
@@ -126,36 +129,90 @@ class LinkedList(object):
                 elif currentNode is None:
                     raise ValueError("Node not in list")
                 else:
-                    previousNode=currentNode
-                    currentNode=currentNode.next
+                    previousNode = currentNode
+                    currentNode = currentNode.next
             if previousNode is None:
                 self.head = currentNode
             else:
                 previousNode = currentNode.next
             self.length -= 1
+
     def clear(self):
         self.head = None
 
+    def reverselist(self):
+        prev = None
+        current = self.head
+        while current is not None:
+            nextNode = current.next
+            current.next = prev
+            prev = current
+            current = nextNode
+        self.head = prev
+
+
 l1 = LinkedList()
-l1.insertAtBeginning(4)
-l1.insertAtBeginning(5)
-l1.insertAtend(6)
-l1.insertAtend(3)
-l1.insertatPosition(2, 2)
+l2 = LinkedList()
+l1.insertAtBeginning(3)
+l1.insertAtend(7)
 l1.__iter__()
-print(l1.length)
-l1.insertatPosition(7, 3)
-l1.__iter__()
-l1.removeatbegin()
-l1.__iter__()
-l1.__iter__()
-l1.removeAtEnd()
-l1.removeAtEnd()
-l1.__iter__()
-l1.__iter__()
-l1.removeatpos(2)
-l1.__iter__()
-l1.clear()
-l1.__iter__()
-print(1)
-l1.__iter__()
+l2.insertAtBeginning(9)
+l2.insertAtend(2)
+
+l2.__iter__()
+l3 = LinkedList()
+i = 0
+carry = 0
+x = l1.length
+y = l2.length
+current1 = l1.head
+current2 = l2.head
+if x>=y:
+    while i < x:
+        if i < y:
+            if current1.data+current2.data+carry <10:
+                l3.insertAtend(current1.data+current2.data+carry)
+                carry = 0
+            if current1.data+current2.data+carry>=10:
+                l3.insertAtend(current2.data+carry+current1.data-10)
+                carry = 1
+        if i>=y:
+            if carry == 1:
+                if current1.data+carry==10:
+                    l3.insertAtend(0)
+                else:
+                    l3.insertAtend(current1.data+carry)
+                    carry = 0
+            else:
+                l3.insertAtend(current1.data)
+        i+=1
+        if current1: current1 = current1.next
+        if current2: current2 = current2.next
+elif y>x:
+    while i < y:
+        if i < x:
+            if current1.data+current2.data+carry <10:
+                l3.insertAtend(current1.data+current2.data+carry)
+                carry = 0
+            if current1.data+current2.data+carry>=10:
+                l3.insertAtend(current2.data+carry+current1.data-10)
+                carry = 1
+        if i>=x:
+            if carry == 1:
+                if current2.data+carry==10:
+                    l3.insertAtend(0)
+                else:
+                    l3.insertAtend(current2.data+carry)
+                    carry = 0
+            else:
+                l3.insertAtend(current2.data)
+        i+=1
+        if current1: current1 = current1.next
+        if current2: current2 = current2.next
+
+if carry == 1:
+    l3.insertAtend(1)
+l3.__iter__()
+
+l3.removeatpos(1)
+l3.__iter__()
