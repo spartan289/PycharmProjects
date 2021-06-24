@@ -8,4 +8,4 @@ def singleNumber(nums: list[int]) -> int:
     for i in nums:
         if hsh[i] == 1:
             return i
-print(singleNumber([2,2,1,3,3]))
+print(singleNumber  ([2,2,1,3,3]))

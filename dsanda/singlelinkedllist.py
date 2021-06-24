@@ -149,70 +149,80 @@ class LinkedList(object):
             prev = current
             current = nextNode
         self.head = prev
+        return prev
+
+
 
 
 l1 = LinkedList()
 l2 = LinkedList()
-l1.insertAtBeginning(3)
-l1.insertAtend(7)
+li=[2,3,4,5]
+l1.insertAtBeginning(1)
+for i in li:
+    l1.insertAtend(i)
 l1.__iter__()
-l2.insertAtBeginning(9)
-l2.insertAtend(2)
+# l2.__iter__()
+# l3 = LinkedList()
+# i = 0
+# carry = 0
+# x = l1.length
+# y = l2.length
+# current1 = l1.head
+# current2 = l2.head
+# if x>=y:
+#     while i < x:
+#         if i < y:
+#             if current1.data+current2.data+carry <10:
+#                 l3.insertAtend(current1.data+current2.data+carry)
+#                 carry = 0
+#             if current1.data+current2.data+carry>=10:
+#                 l3.insertAtend(current2.data+carry+current1.data-10)
+#                 carry = 1
+#         if i>=y:
+#             if carry == 1:
+#                 if current1.data+carry==10:
+#                     l3.insertAtend(0)
+#                 else:
+#                     l3.insertAtend(current1.data+carry)
+#                     carry = 0
+#             else:
+#                 l3.insertAtend(current1.data)
+#         i+=1
+#         if current1: current1 = current1.next
+#         if current2: current2 = current2.next
+# elif y>x:
+#     while i < y:
+#         if i < x:
+#             if current1.data+current2.data+carry <10:
+#                 l3.insertAtend(current1.data+current2.data+carry)
+#                 carry = 0
+#             if current1.data+current2.data+carry>=10:
+#                 l3.insertAtend(current2.data+carry+current1.data-10)
+#                 carry = 1
+#         if i>=x:
+#             if carry == 1:
+#                 if current2.data+carry==10:
+#                     l3.insertAtend(0)
+#                 else:
+#                     l3.insertAtend(current2.data+carry)
+#                     carry = 0
+#             else:
+#                 l3.insertAtend(current2.data)
+#         i+=1
+#         if current1: current1 = current1.next
+#         if current2: current2 = current2.next
+#
+# if carry == 1:
+#     l3.insertAtend(1)
+# l3.__iter__()
+#
+# l3.removeatpos(1)
+# l3.__iter__()
+x = LinkedList()
+x.__iter__()
+if x==l1:
+    print(True)
+else:
+    print(False)
 
-l2.__iter__()
-l3 = LinkedList()
-i = 0
-carry = 0
-x = l1.length
-y = l2.length
-current1 = l1.head
-current2 = l2.head
-if x>=y:
-    while i < x:
-        if i < y:
-            if current1.data+current2.data+carry <10:
-                l3.insertAtend(current1.data+current2.data+carry)
-                carry = 0
-            if current1.data+current2.data+carry>=10:
-                l3.insertAtend(current2.data+carry+current1.data-10)
-                carry = 1
-        if i>=y:
-            if carry == 1:
-                if current1.data+carry==10:
-                    l3.insertAtend(0)
-                else:
-                    l3.insertAtend(current1.data+carry)
-                    carry = 0
-            else:
-                l3.insertAtend(current1.data)
-        i+=1
-        if current1: current1 = current1.next
-        if current2: current2 = current2.next
-elif y>x:
-    while i < y:
-        if i < x:
-            if current1.data+current2.data+carry <10:
-                l3.insertAtend(current1.data+current2.data+carry)
-                carry = 0
-            if current1.data+current2.data+carry>=10:
-                l3.insertAtend(current2.data+carry+current1.data-10)
-                carry = 1
-        if i>=x:
-            if carry == 1:
-                if current2.data+carry==10:
-                    l3.insertAtend(0)
-                else:
-                    l3.insertAtend(current2.data+carry)
-                    carry = 0
-            else:
-                l3.insertAtend(current2.data)
-        i+=1
-        if current1: current1 = current1.next
-        if current2: current2 = current2.next
 
-if carry == 1:
-    l3.insertAtend(1)
-l3.__iter__()
-
-l3.removeatpos(1)
-l3.__iter__()

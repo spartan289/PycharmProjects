@@ -11,4 +11,4 @@ def duplicate(nums: list[int]) -> int:
         slow = nums[slow]
         fast = nums[fast]
     return slow
-print(duplicate([1,2,3,4,5,6,7,3,8]))
+print(duplicate([3,2,0,4,-2]))
