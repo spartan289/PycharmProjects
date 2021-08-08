@@ -1,13 +1,14 @@
 def threeSum(nums: list[int]) -> list[list[int]]:
-    li = []
+    a = set()
+    hash = {}
     for i in range(len(nums)):
-        for j in range(i+1,len(nums)):
-            for k in range(j+1,len(nums)):
-                if nums[i]+nums[j]+nums[k]==0:
-                    l = []
-                    l.append(nums[i])
-                    l.append(nums[j])
-                    l.append(nums[k])
-                    li.append(l)
-    return li
-print(threeSum([-1,0,1,2,-1,-4]))
+        hash[nums[i]]=i
+
+    for i in range(len(nums)):
+        for j in range(i+1,len(nums)-1):
+            x=-(nums[i]+nums[j])
+            if x in hash and hash[x]>j:
+                a.add(tuple(sorted([nums[i],nums[j],x])))
+    a = list(a)
+    return a
+print(threeSum([1,2,-2,-1]))

@@ -1,0 +1,23 @@
+n = int(input())
+twoth = n//2000
+n = n-2000*twoth
+fiveh = n//500
+n = n-500*fiveh
+twoh = n//200
+n = n-200*twoh
+oneh = n//100
+n = n-100*oneh
+fifty = n//50
+n = n-50*fifty
+twenty = n//20
+n = n-20*twenty
+ten = n//10
+n = n-10*ten
+five = n//5
+n = n-5*five
+two = n//2
+n = n-2*two
+one = n//1
+n = n-one
+dict = {'two thousand': twoth,'five hundred': fiveh,'two hundred':twoh,'one hundred': oneh,'fifty':fifty,'twenty':twenty,'ten':ten,'five':five,'two': two, 'one':one}
+print(dict)

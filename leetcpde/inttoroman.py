@@ -1,5 +1,13 @@
 def inttoroman(nums):
-    dict = {1: "I", 5: "V", 10: "X", 50: "L", 100: "C", 500:"D" , 1000: "M"}
-    dict2 = {"IV": 4, "IX": 9, "XL": 40, "XC": 90, "CD": 400, "CM": 900}
-
-inttoroman(2000)
+    values = [1000,900,500,400,100,90,50,40,10,9,5,4,1]
+    romanliterals = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"]
+    i=0
+    str = ''
+    while i<len(values):
+        if values[i]<=nums:
+            nums-=values[i]
+            str+=romanliterals[i]
+        else:
+            i+=1
+    return str
+print(inttoroman(2355))
