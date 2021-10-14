@@ -7,4 +7,5 @@ for _ in range(int(input())):
                 continue
             if j%(i%j)==0:
                 c+=1
+                print(j,i,j)
     print(c)

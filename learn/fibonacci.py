@@ -1,16 +1,15 @@
 def fibonacci(n):
     assert n>=0 and int(n)==n,"Fibbonaci number cannot be negative number or non integer."
 
-    if n==0:
-        return ""
-    def header(n):
+    if n==0 or n==1:
+        return n
 
-        if n==0:
-            return 0
-        if n==1:
-            return 1
-        return header(n-1)+header(n-2)
-    print(header(n-1))
-    return fibonacci(n-1)
+    return fibonacci(n-1)+fibonacci(n-2)
+def factorial(n):
+    if n<=1:
+        return 1
+    return n*factorial(n-1)
 
-fibonacci(7)
+
+print(fibonacci(8))
+print(factorial(5))

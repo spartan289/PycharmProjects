@@ -9,4 +9,3 @@ def primes_sieve1(limit):
             primes[f] = False
     return [i for i in primes if primes[i]==True]
 
-print(list(primes_sieve1(3)))

@@ -6,4 +6,11 @@ def twosum(nums,target):
             h[num]=i
         else:
             return[h[n],i]
-print(twosum([2,11,15,7],9))
+def twoSum(nums, target: int) :
+        hash={}
+        for i in range(len(nums)):
+            if nums[i] in hash:
+                return [i,hash[nums[i]]]
+            else:
+                hash[target-nums[i]]=i
+print(twoSum([2,11,15,7],9))
