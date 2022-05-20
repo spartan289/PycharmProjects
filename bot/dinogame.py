@@ -1,4 +1,4 @@
-import pyautogui
+import key
 from PIL import Image, ImageGrab,ImageOps
 import time
 import numpy as np
