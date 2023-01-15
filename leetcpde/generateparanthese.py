@@ -11,17 +11,29 @@ def isBalanced(s):
         else:
             stack.append(i)
     return True if len(stack)==0 else False
-s = []
-def permutation(x,y,n):
+def permutation(x,y,n,s):
+
     if y==n-1:
-        if isBalanced(x):
-            print(x)
+        if x.copy() not in s:
+            if isBalanced(x):
+                s.append(x.copy())
     else:
         for i in range(y,n):
             x[i],x[y] = x[y],x[i]
-            permutation(x,y+1,n)
+            if(x.copy() not in s):
+                permutation(x,y+1,n,s)
             x[i],x[y] = x[y],x[i]
+def generate_paranthese(n):
+    par=[]
+    for i in range(n):
+        par.append('(')
+    for j in range(n):
+        par.append(')')
+    s = []
+    permutation(par,0,n*2,s)
+    for i in range(len(s)):
+        s[i]=''.join(s[i])
+    return s
+print(generate_paranthese(8))
 
-permutation(['(','(',')',')'],0,4)
-print(s)
 

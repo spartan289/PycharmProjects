@@ -6,7 +6,7 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 2
 RATE = 44100
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('3.142.81.166', 13050))
+s.connect(('ip address', 13050))
 p = pyaudio.PyAudio()
 
 stream = p.open(format=FORMAT,
