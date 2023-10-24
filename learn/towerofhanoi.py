@@ -5,4 +5,4 @@ def towerofhanoi(numberofDisks, startpeg=1, endpeg=3):
         towerofhanoi(numberofDisks - 1, 6 - startpeg - endpeg, endpeg)
 
 
-towerofhanoi(numberofDisks=3)
+towerofhanoi(numberofDisks=2)
